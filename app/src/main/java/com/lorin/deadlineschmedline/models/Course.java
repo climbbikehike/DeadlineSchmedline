@@ -13,6 +13,21 @@ public class Course {
     private String name;
     private Date dateCreated;
     private Date dateWhenCourseEnds;
+    private double hoursWorked;         //The total hours worked on the course thus far.
+
+    public Course() {
+        this("No Name", new Date(), new Date(), 0);
+    }
+
+    public Course(String name,
+                  Date dateCreated,
+                  Date dateWhenCourseEnds,
+                  double hoursWorked) {
+        this.name = name;
+        this.dateCreated = dateCreated;
+        this.dateWhenCourseEnds = dateWhenCourseEnds;
+        this.hoursWorked = hoursWorked;
+    }
 
     /**
      * Gets the name of the course
@@ -52,5 +67,13 @@ public class Course {
      */
     public void setDateWhenCourseEnds(Date newEndDate) {
         dateWhenCourseEnds = newEndDate;
+    }
+
+    /**
+     * Gets the number of hours worked on the course
+     * @return returns the hours worked on the course
+     */
+    public double getHoursWorked() {
+        return hoursWorked;
     }
 }

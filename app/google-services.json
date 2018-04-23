@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "438871660107",
+    "firebase_url": "https://deadlineschmedline.firebaseio.com",
+    "project_id": "deadlineschmedline",
+    "storage_bucket": "deadlineschmedline.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:438871660107:android:7931ee73e1f5da0b",
+        "android_client_info": {
+          "package_name": "com.lorin.deadlineschmedline"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "438871660107-bcvl8s41uifdogdrgobt912tug0c3gb2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.lorin.deadlineschmedline",
+            "certificate_hash": "72e3bef0a0b8fd17c99e8271c9280618b4e096f2"
+          }
+        },
+        {
+          "client_id": "438871660107-l88o0vdqm711pc3tsc0k63a2nb0lha0j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-amf9ojllI9q-fHvhJbepjGtWnmSFfzs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "438871660107-l88o0vdqm711pc3tsc0k63a2nb0lha0j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
