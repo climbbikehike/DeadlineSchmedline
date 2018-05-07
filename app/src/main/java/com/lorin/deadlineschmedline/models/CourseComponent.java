@@ -15,7 +15,10 @@ public class CourseComponent {
     private String componentType;
     private Date dateCreated;
     private Date dateWhenCourseEnds;
+    private Date startTime;
+    private Date endTime;
     private double hoursWorked;         //The total hours worked on the course thus far.
+    private final static long MILLIS_IN_ONE_HOUR = 3600000;
 
     public CourseComponent() {
         this("No Name", "Assignment", new Date(), new Date());
@@ -32,6 +35,17 @@ public class CourseComponent {
         this.hoursWorked = 0;
     }
 
+    /**
+     * Calculates the hours worked and returns it as a long
+     * @param startDateTime the starting date or time
+     * @param endDateTime the ending date or time
+     */
+    public long calculateHoursWorked(Date startDateTime, Date endDateTime) {
+        Long startTime = startDateTime.getTime();
+        Long endTime = endDateTime.getTime();
+        return ((endTime - startTime) / MILLIS_IN_ONE_HOUR);
+    }
+
     public Course getParentCourse() {
         return parentCourse;
     }
@@ -46,6 +60,22 @@ public class CourseComponent {
      */
     public String getName() {
         return name;
+    }
+
+    public Date getStartTime() {
+        return startTime;
+    }
+
+    public void setStartTime(Date timeOfStart) {
+        startTime = timeOfStart;
+    }
+
+    public Date getEndTime() {
+        return endTime;
+    }
+
+    public void setEndTime(Date timeOfFinish) {
+        endTime = timeOfFinish;
     }
 
     /**
