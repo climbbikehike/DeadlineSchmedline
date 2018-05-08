@@ -9,7 +9,7 @@ import java.util.Date;
 /**
  * This class holds the data for a component of a Course. For example, a Project or Assignment
  */
-public class CourseComponent {
+public class CourseComponent implements Addable {
     private Course parentCourse;
     private String name;
     private String componentType;
@@ -17,7 +17,7 @@ public class CourseComponent {
     private Date dateWhenCourseEnds;
     private Date startTime;
     private Date endTime;
-    private double hoursWorked;         //The total hours worked on the course thus far.
+    private double hoursWorked;         //The total hours worked on the course component thus far.
     private final static long MILLIS_IN_ONE_HOUR = 3600000;
 
     public CourseComponent() {

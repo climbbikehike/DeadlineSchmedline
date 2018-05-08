@@ -9,7 +9,7 @@ import java.util.Date;
 /**
  * This class contains the data for a Course that will be tracked.
  */
-public class Course {
+public class Course implements Addable {
     private String name;
     private Date dateCreated;
     private Date dateWhenCourseEnds;
