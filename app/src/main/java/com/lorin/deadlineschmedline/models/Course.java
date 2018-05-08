@@ -13,7 +13,10 @@ public class Course {
     private String name;
     private Date dateCreated;
     private Date dateWhenCourseEnds;
+    private Date startTime;
+    private Date endTime;
     private double hoursWorked;         //The total hours worked on the course thus far.
+    private final static long MILLIS_IN_ONE_HOUR = 3600000;
 
     public Course() {
         this("No Name", new Date(), new Date(), 0);
@@ -27,6 +30,33 @@ public class Course {
         this.dateCreated = dateCreated;
         this.dateWhenCourseEnds = dateWhenCourseEnds;
         this.hoursWorked = hoursWorked;
+    }
+
+    /**
+     * Calculates the hours worked and returns it as a long
+     * @param startDateTime the starting date or time
+     * @param endDateTime the ending date or time
+     */
+    public Long calculateHoursWorked(Date startDateTime, Date endDateTime) {
+        Long startTime = startDateTime.getTime();
+        Long endTime = endDateTime.getTime();
+        return ((endTime - startTime) / MILLIS_IN_ONE_HOUR);
+    }
+
+    public Date getStartTime() {
+        return startTime;
+    }
+
+    public void setStartTime(Date timeOfStart) {
+        startTime = timeOfStart;
+    }
+
+    public Date getEndTime() {
+        return endTime;
+    }
+
+    public void setEndTime(Date timeOfFinish) {
+        endTime = timeOfFinish;
     }
 
     /**
