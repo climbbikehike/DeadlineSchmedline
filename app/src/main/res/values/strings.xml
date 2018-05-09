@@ -52,4 +52,10 @@
     <string name="add_course">Add A Course</string>
     <string name="add_course_component">Add A Component</string>
 
+    <!-- Course Buttons -->
+    <string name="course_name">Name</string>
+    <string name="course_type">Type</string>
+    <string name="due_date">Due Date</string>
+    <string name="save_course">Save Course</string>
+
 </resources>
