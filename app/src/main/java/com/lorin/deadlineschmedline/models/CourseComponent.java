@@ -9,7 +9,7 @@ import java.util.Date;
 /**
  * This class holds the data for a component of a Course. For example, a Project or Assignment
  */
-public class CourseComponent {
+public class CourseComponent implements Addable {
     private Course parentCourse;
     private String name;
     private String componentType;
