@@ -29,26 +29,6 @@
             android:inputType="textPersonName"
             android:text="@string/course_name" />
 
-        <EditText
-            android:id="@+id/course_type"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="@string/course_type" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="date" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="date" />
-
         <Button
             android:id="@+id/button_save"
             android:layout_width="match_parent"

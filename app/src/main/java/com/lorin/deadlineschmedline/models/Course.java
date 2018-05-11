@@ -11,20 +11,20 @@ import java.util.Date;
  */
 public class Course {
     private String name;
-    private Date dateCreated;
-    private Date dateWhenCourseEnds;
-    private Date startTime;
-    private Date endTime;
+    private Long dateCreated;
+    private Long dateWhenCourseEnds;
+    private Long startTime;
+    private Long endTime;
     private double hoursWorked;         //The total hours worked on the course thus far.
     private final static long MILLIS_IN_ONE_HOUR = 3600000;
 
     public Course() {
-        this("No Name", new Date(), new Date(), 0);
+        this("No Name", new Date().getTime(), new Date().getTime(), 0);
     }
 
     public Course(String name,
-                  Date dateCreated,
-                  Date dateWhenCourseEnds,
+                  Long dateCreated,
+                  Long dateWhenCourseEnds,
                   double hoursWorked) {
         this.name = name;
         this.dateCreated = dateCreated;
@@ -43,19 +43,19 @@ public class Course {
         return ((endTime - startTime) / MILLIS_IN_ONE_HOUR);
     }
 
-    public Date getStartTime() {
+    public Long getStartTime() {
         return startTime;
     }
 
-    public void setStartTime(Date timeOfStart) {
+    public void setStartTime(Long timeOfStart) {
         startTime = timeOfStart;
     }
 
-    public Date getEndTime() {
+    public Long getEndTime() {
         return endTime;
     }
 
-    public void setEndTime(Date timeOfFinish) {
+    public void setEndTime(Long timeOfFinish) {
         endTime = timeOfFinish;
     }
 
@@ -79,7 +79,7 @@ public class Course {
      * Gets the date the course was created
      * @return the date created
      */
-    public Date getDateCreated() {
+    public Long getDateCreated() {
         return dateCreated;
     }
 
@@ -87,7 +87,7 @@ public class Course {
      * Gets the date when the course ends
      * @return date the course ends
      */
-    public Date getDateWhenCourseEnds() {
+    public Long getDateWhenCourseEnds() {
         return dateWhenCourseEnds;
     }
 
@@ -95,7 +95,7 @@ public class Course {
      * Sets a new end date for the course
      * @param newEndDate the new date to set to
      */
-    public void setDateWhenCourseEnds(Date newEndDate) {
+    public void setDateWhenCourseEnds(Long newEndDate) {
         dateWhenCourseEnds = newEndDate;
     }
 
