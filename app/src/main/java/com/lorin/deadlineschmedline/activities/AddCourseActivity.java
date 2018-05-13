@@ -22,7 +22,7 @@ public class AddCourseActivity extends AppCompatActivity {
     private FirebaseUser mCurrentUser;
     private EditText courseName;
     private Button buttonSave;
-    private final Long DEFAULT_DATE = 1514782800000;   // Jan 1st 2018
+    private final Long DEFAULT_DATE = (new Date()).getTime();   // Today's Date
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +42,7 @@ public class AddCourseActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Course course = new Course(courseName.getText().toString(),
                                             new Date().getTime(),
-                                            new Date(DEFAULT_DATE).getTime(),
+                                            DEFAULT_DATE,
                                             0.0);
 
                 mDatabase.child("users")
