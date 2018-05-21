@@ -11,9 +11,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="15dp"
         android:text="@string/courses"
-        android:textAppearance="@android:style/TextAppearance.Material.Medium"
+        android:textSize="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.052"
@@ -51,6 +51,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/courses"
-        tools:listitem="@layout/main_line_view" />
+        tools:listitem="@layout/course_list_item" />
 
 </android.support.constraint.ConstraintLayout>
