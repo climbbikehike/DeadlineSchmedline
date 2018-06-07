@@ -2,6 +2,7 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainactivityview"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.lorin.deadlineschmedline.activities.MainActivity">
@@ -41,7 +42,7 @@
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rv_course_item_list"
-        android:layout_width="342dp"
+        android:layout_width="357dp"
         android:layout_height="432dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
@@ -51,6 +52,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/courses"
+        app:layout_constraintVertical_bias="0.0"
         tools:listitem="@layout/course_list_item" />
 
 </android.support.constraint.ConstraintLayout>

@@ -27,7 +27,8 @@
         <activity android:name=".activities.ResetPasswordActivity" />
         <activity android:name=".activities.MainActivity" />
         <activity android:name=".activities.AddCourseActivity" />
-        <activity android:name=".activities.AddCourseComponentActivity"></activity>
+        <activity android:name=".activities.AddCourseComponentActivity" />
+        <activity android:name=".activities.CourseDetailActivity"></activity>
     </application>
 
 </manifest>

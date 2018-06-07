@@ -11,8 +11,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
-import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -20,7 +20,6 @@ import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.Query;
 import com.lorin.deadlineschmedline.R;
 import com.lorin.deadlineschmedline.adapters.CourseAdapter;
-import com.lorin.deadlineschmedline.adapters.FirestoreAdapter;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -116,7 +115,8 @@ public class MainActivity extends AppCompatActivity
                 startActivity(new Intent(MainActivity.this, AddCourseActivity.class));
                 return true;
             case R.id.add_course_component:
-                startActivity(new Intent(MainActivity.this, AddCourseComponentActivity.class));
+                //startActivity(new Intent(MainActivity.this, AddCourseComponentActivity.class));
+                Toast.makeText(this, "This feature coming soon!", Toast.LENGTH_LONG).show();
                 return true;
             default:
                 return true;
@@ -124,9 +124,10 @@ public class MainActivity extends AppCompatActivity
     }
 
     @Override
-    public void onCourseSelected(DocumentSnapshot restaurant) {
-        // Go to the details page for the selected activity
-        Intent intent = new Intent(this, AddCourseActivity.class);
+    public void onCourseSelected(DocumentSnapshot course) {
+        //TODO Go to the details page for the selected activity
+        Intent intent = new Intent(this, CourseDetailActivity.class);
+       // intent.putExtra(course)
         startActivity(intent);
 
         //overridePendingTransition(R.anim.slide_in_from_right, R.anim.slide_out_to_left);
