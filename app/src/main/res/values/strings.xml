@@ -58,4 +58,9 @@
     <string name="due_date">Due Date</string>
     <string name="save_course">Save Course</string>
 
+    <!-- Course Detail -->
+    <string name="title_hours_worked">Total Hours Worked</string>
+    <string name="btn_start_time_stamp">Start Time</string>
+    <string name="btn_end_time_stamp">End Time</string>
+
 </resources>

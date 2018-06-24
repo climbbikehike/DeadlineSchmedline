@@ -4,19 +4,21 @@ package com.lorin.deadlineschmedline.models;
  * Created by Lorin on 4/23/2018.
  */
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  * This class contains the data for a Course that will be tracked.
  */
-public class Course {
+public class Course implements Serializable {
     private String name;
     private Long dateCreated;
     private Long dateWhenCourseEnds;
     private Long startTime;
     private Long endTime;
-    private double hoursWorked;         //The total hours worked on the course thus far.
-    private final static long MILLIS_IN_ONE_HOUR = 3600000;
+    private boolean timeStampStarted = false;
+    private Double hoursWorked;         //The total hours worked on the course thus far.
+    private final static double MILLIS_IN_ONE_HOUR = 3600000.0;
 
     public Course() {
         this("No Name", new Date().getTime(), new Date().getTime(), 0);
@@ -33,14 +35,12 @@ public class Course {
     }
 
     /**
-     * Calculates the hours worked and returns it as a long
-     * @param startDateTime the starting date or time
-     * @param endDateTime the ending date or time
+     * Updates the total hours worked
+     *TODO add the functionality to add timestamps
      */
-    public Long calculateHoursWorked(Date startDateTime, Date endDateTime) {
-        Long startTime = startDateTime.getTime();
-        Long endTime = endDateTime.getTime();
-        return ((endTime - startTime) / MILLIS_IN_ONE_HOUR);
+    public void updateHourWorked() {
+        hoursWorked = hoursWorked + ((endTime - startTime) / MILLIS_IN_ONE_HOUR);
+        //add timestamp functionality
     }
 
     public Long getStartTime() {
@@ -103,7 +103,19 @@ public class Course {
      * Gets the number of hours worked on the course
      * @return returns the hours worked on the course
      */
-    public double getHoursWorked() {
+    public Double getHoursWorked() {
         return hoursWorked;
+    }
+
+    public void setHoursWorked(Long hoursToAdd) {
+        hoursWorked = hoursWorked + hoursToAdd;
+    }
+
+    public boolean getTimeStampStarted() {
+        return timeStampStarted;
+    }
+
+    public void setTimeStampStarted(Boolean timeStampStarted) {
+        this.timeStampStarted = timeStampStarted;
     }
 }

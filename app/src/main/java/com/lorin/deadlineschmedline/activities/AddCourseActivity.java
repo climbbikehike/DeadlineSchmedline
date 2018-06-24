@@ -37,9 +37,9 @@ public class AddCourseActivity extends AppCompatActivity {
         db = FirebaseFirestore.getInstance();
         mCurrentUser = FirebaseAuth.getInstance().getCurrentUser();
 
+        //TODO fix up by using Butterknife
         //Set up the button and text inputs for the course
         courseName = (EditText) findViewById(R.id.course_name);
-       // courseType = (EditText) findViewById(R.id.course_type);
         buttonSave = (Button) findViewById(R.id.button_save);
 
         buttonSave.setOnClickListener(new View.OnClickListener() {

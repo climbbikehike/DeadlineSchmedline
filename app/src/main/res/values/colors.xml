@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#00e645</color>
+    <color name="colorPrimary">#0086e6</color>
     <color name="colorPrimaryLight">#e7e6e6</color>
     <color name="colorPrimaryDark">#767676</color>
     <color name="colorAccent">#0595e9</color>
@@ -18,4 +18,8 @@
     <color name="btn_login_bg">#eceef1</color>
     <color name="lbl_name">#333333</color>
     <color name="btn_logut_bg">#ff6861</color>
+
+    <!-- course detail button colors -->
+    <color name="btn_start_time_stamp">#3ee96e</color>
+    <color name="btn_end_time_stamp">#ff6861</color>
 </resources>

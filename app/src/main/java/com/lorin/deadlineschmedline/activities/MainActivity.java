@@ -20,6 +20,7 @@ import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.Query;
 import com.lorin.deadlineschmedline.R;
 import com.lorin.deadlineschmedline.adapters.CourseAdapter;
+import com.lorin.deadlineschmedline.models.Course;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -124,10 +125,11 @@ public class MainActivity extends AppCompatActivity
     }
 
     @Override
-    public void onCourseSelected(DocumentSnapshot course) {
+    public void onCourseSelected(DocumentSnapshot courseDocSnapshot) {
         //TODO Go to the details page for the selected activity
+        Course course = courseDocSnapshot.toObject(Course.class);
         Intent intent = new Intent(this, CourseDetailActivity.class);
-       // intent.putExtra(course)
+        intent.putExtra("Course", course);
         startActivity(intent);
 
         //overridePendingTransition(R.anim.slide_in_from_right, R.anim.slide_out_to_left);
